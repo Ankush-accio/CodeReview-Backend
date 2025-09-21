@@ -4,6 +4,7 @@ const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_KEY);
 const model = genAI.getGenerativeModel({
     model: "gemini-2.0-flash",
     systemInstruction:`Here's a solid system instruction for your AI code reviewer: 
+                    ``MOST IMPORTANT  only give response when the the input is code not the strings and anything else``
                         make sure respose is easy to read with appropriate spaces 
                         add some empty lines after every heading and content
                         please give response with some red x and green tick with some emojis
